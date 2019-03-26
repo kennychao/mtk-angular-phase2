@@ -1,0 +1,9 @@
+section {
+	top: 105px;
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+	max-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+}

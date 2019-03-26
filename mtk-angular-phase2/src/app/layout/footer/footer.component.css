@@ -1,0 +1,37 @@
+footer {
+	position: relative;
+	background-color: lightgray;
+	width: 100%;
+	top: 130px;
+	border: 1px solid gray;
+}
+
+.c-footer-left {
+	display: inline-block;
+	width: 50%;
+	border-right: 1px solid gray;
+}
+
+.c-footer-right {
+	display: inline-block;
+}
+
+
+@media screen and (max-width: 980px) {
+
+	footer {
+		text-align: center;
+	}
+
+	footer ul {
+		padding: 0;
+	}
+
+	.c-footer-left {
+		display: block;
+		width: 100%;
+		border: 0;
+	}
+
+
+}
