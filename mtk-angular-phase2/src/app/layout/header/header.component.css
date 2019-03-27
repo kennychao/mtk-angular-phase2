@@ -34,8 +34,12 @@ nav > ul {
     line-height: 0;
 }
 
+#menu {
+  display: none;
+}
+
 .c-menu-list {
-	display: none;
+	/* display: none; */
 	line-height: 30px;
 	background-color: lightpink;
 }

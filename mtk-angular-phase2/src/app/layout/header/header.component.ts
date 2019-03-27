@@ -10,8 +10,14 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
 
-  doMenu() {
+  ischeck = false;
 
+  isChecked() {
+    if ( this.ischeck ) {
+      this.ischeck = false;
+    } else {
+      this.ischeck = true;
+    }
   }
 
   ngOnInit() {

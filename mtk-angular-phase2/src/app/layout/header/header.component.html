@@ -4,7 +4,7 @@
   </div>
   <nav>
       <ul>
-          <li class="c-nav-li"><a href="index.html">| 首頁</a></li>
+          <li class="c-nav-li"><a [routerLink]="['/', 'posts']">| 首頁</a></li>
           <li class="c-nav-li">| 關於我們</li>
           <li class="c-nav-li">| 活動消息</li>
           <li class="c-nav-li">| Q & A</li>
@@ -12,16 +12,18 @@
       </ul>
   </nav>
   <div class="c-menu">
-      <img (click)="doMenu()" src="assets/images/btn_menu.svg">
+      <!-- <img (click)="doMenu()" src="assets/images/btn_menu.svg"> -->
+      <input type="checkbox" (change)="isChecked()" id="menu"/>
+      <label for="menu" class="menuchecker"><img src="assets/images/btn_menu.svg"></label>
   </div>
-  <div class="c-menu-list">
+  <div class="c-menu-list" [hidden]="!ischeck">
       <ul>
-          <li class="c-menu-li"><a href="index.html">首頁</a></li>
+          <li class="c-menu-li"><a [routerLink]="['/', 'posts']">首頁</a></li>
           <li class="c-menu-li">關於我們</li>
           <li class="c-menu-li">活動消息</li>
           <li class="c-menu-li">Q & A</li>
           <li class="c-menu-li"><a [routerLink]="['/', 'login']">登入</a></li>
       </ul>
   </div>
-  <input type="hidden" name="" id="isMenuOpen">
+  <!-- <input type="hidden" name="" id="isMenuOpen"> -->
 </header>
