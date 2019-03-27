@@ -14,4 +14,38 @@ li {
 	list-style:none;
 }
 
+header {
+	position: fixed;
+	background-color: lightgreen;
+	width: 100%;
+	line-height: 105px;
+	height: 105px;
+  z-index: 10;
+  top: 0;
+}
 
+.c-logo {
+	display: inline-block;
+	line-height: inherit;
+	margin-left: 30px;
+}
+
+.c-logo img {
+	width: 200px;
+	vertical-align: middle;
+}
+
+section {
+	top: 105px;
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+	max-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.c-page-content {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}

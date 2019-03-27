@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './layout/main/main.component';
-import { AuthComponent } from './login/auth/auth.component';
+import { MainThemeTwoComponent } from './layout/main-theme-two/main-theme-two.component';
 
 const routes: Routes = [
   {
@@ -13,6 +13,11 @@ const routes: Routes = [
     path: 'login',
     component: MainComponent,
     loadChildren: './login/login.module#LoginModule'
+  },
+  {
+    path: 'article',
+    component: MainThemeTwoComponent,
+    loadChildren: './function/function.module#FunctionModule'
   }
 ];
 

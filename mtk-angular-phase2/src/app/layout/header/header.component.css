@@ -1,13 +1,3 @@
-header {
-	position: fixed;
-	background-color: lightgreen;
-	width: 100%;
-	line-height: 105px;
-	height: 105px;
-  z-index: 10;
-  top: 0;
-}
-
 nav {
 	display: inline-block;
 	float: right;
@@ -52,17 +42,6 @@ nav > ul {
 .c-menu-list li{
 	text-align: center;
 	border: 1px solid white;
-}
-
-.c-logo {
-	display: inline-block;
-	line-height: inherit;
-	margin-left: 30px;
-}
-
-.c-logo img {
-	width: 200px;
-	vertical-align: middle;
 }
 
 .c-nav-li {
