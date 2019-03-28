@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderThemeTwoComponent implements OnInit {
 
+  userInfo;
+
   constructor() { }
 
   ngOnInit() {
+    this.userInfo = JSON.parse(localStorage.getItem('userInfo'));
   }
 
 }

@@ -8,12 +8,24 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent implements OnInit {
 
+  loginData = {
+    unitCode: '',
+    userAccount: '',
+    userPwd: ''
+  };
+
+  userInfo = {
+    userId: ''
+  };
+
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   doLogin() {
+    this.userInfo.userId = this.loginData.userAccount;
+    localStorage.setItem('userInfo', JSON.stringify(this.userInfo));
     this.router.navigate(['/article']);
   }
 

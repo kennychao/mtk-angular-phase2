@@ -3,11 +3,25 @@
   <div class="u-t-align--center">
       <span class="c-tab c-tab--active">發行公司．股務代理機構</span>
   </div>
+  <form>
   <div class="c-form">
       <div class="c-form__tr">
           <div class="c-form__th">單位代號：</div>
           <div class="c-form__td">
-              <input class="u-width--70" type="text" name="unitCode">
+              <input class="u-width--70" type="text" name="unitCode" placeholder="請輸入單位代號"
+              [(ngModel)]="loginData.unitCode"
+              required
+              minlength="4"
+              #unitCode="ngModel"
+              >
+          </div>
+          <div *ngIf="unitCode.dirty && unitCode.invalid" class="c-error">
+            <span *ngIf="unitCode.errors['required']">
+              * 請輸入單位代號
+            </span>
+            <span *ngIf="unitCode.errors['minlength']">
+              * 代號長度必須大於4
+            </span>
           </div>
       </div>
       <div class="c-form__tr">
@@ -15,25 +29,54 @@
           <div class="c-form__td">
               <select class="u-width--70">
                   <option>請選擇</option>
+                  <option>1</option>
+                  <option>2</option>
               </select>
           </div>
       </div>
       <div class="c-form__tr">
           <div class="c-form__th">使用者帳號：</div>
           <div class="c-form__td">
-              <input class="u-width--70" type="text" name="userAccount">
+              <input class="u-width--70" type="text" name="userAccount" placeholder="請輸入使用者帳號"
+              [(ngModel)]="loginData.userAccount"
+              required
+              pattern="[a-zA-Z]\d{9}"
+              #userAccount="ngModel"
+              >
+          </div>
+          <div *ngIf="userAccount.dirty && userAccount.invalid" class="c-error">
+            <span *ngIf="userAccount.errors['required']">
+              * 請輸入使用者帳號
+            </span>
+            <span *ngIf="userAccount.errors['pattern']">
+              * 請輸入正確身分證格式
+            </span>
           </div>
       </div>
       <div class="c-form__tr">
           <div class="c-form__th">使用者密碼：</div>
           <div class="c-form__td">
-              <input class="u-width--70" type="text" name="userPwd">
+              <input class="u-width--70" type="text" name="userPwd" placeholder="請輸入使用者密碼"
+              [(ngModel)]="loginData.userPwd"
+              required
+              minlength="4"
+              #userPwd="ngModel"
+              >
+          </div>
+          <div *ngIf="userPwd.dirty && userPwd.invalid" class="c-error">
+            <span *ngIf="userPwd.errors['required']">
+              * 請輸入使用者密碼
+            </span>
+            <span *ngIf="userPwd.errors['minlength']">
+              * 密碼長度必須大於4
+            </span>
           </div>
       </div>
       <div class="c-form__tr u-t-align--center u-margin--vertical-1em">
-          <button class="c-button" (click)="doLogin()">登入</button>
+          <button class="c-button" (click)="doLogin()" [disabled]="userPwd.invalid || userAccount.invalid || unitCode.invalid">登入</button>
       </div>
   </div>
+</form>
   <div class="u-t-align--center u-margin--vertical-1em">
       <button class="c-button">資料下載</button>
   </div>

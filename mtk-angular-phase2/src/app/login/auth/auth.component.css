@@ -42,3 +42,9 @@
 	margin-left: .3em;
 	background-color: #FFFFFF;
 }
+
+.c-error {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
